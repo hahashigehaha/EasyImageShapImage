@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EasyImageShap">
+        <attr name="imageshap" format="integer">
+            <enum name="round" value="0"/>
+            <enum name="ellipse" value="1"/>
+            <enum name="fillet" value="2"/>
+        </attr>
+    </declare-styleable>
+    
+</resources>
