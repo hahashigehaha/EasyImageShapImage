@@ -23,12 +23,15 @@ public class EasyShapImageView extends  BaseImageView {
         init(context,null);
     }
 
+    private int radio ;
 
     private void init(Context context ,AttributeSet attrs){
         if (attrs == null )
             return;
         TypedArray typedArray =  context.obtainStyledAttributes(attrs, R.styleable.EasyImageShap);
         int imageShap = typedArray.getInteger(R.styleable.EasyImageShap_imageshap,0);
+        radio = typedArray.getDimensionPixelSize(R.styleable.EasyImageShap_filletradio,5);
+        typedArray.recycle();
         setImageShapAttr(imageShap);
     }
 
@@ -39,7 +42,7 @@ public class EasyShapImageView extends  BaseImageView {
         else if(shapStype == 1)
             setShap(new EllipseImageView());
         else if (shapStype == 2)
-            setShap(new FilletImageView());
+            setShap(new FilletImageView(radio));
     }
 
 

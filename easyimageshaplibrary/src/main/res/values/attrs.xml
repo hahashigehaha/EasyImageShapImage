@@ -6,6 +6,7 @@
             <enum name="ellipse" value="1"/>
             <enum name="fillet" value="2"/>
         </attr>
+        <attr name="filletradio" format="reference|dimension"/>
     </declare-styleable>
     
 </resources>

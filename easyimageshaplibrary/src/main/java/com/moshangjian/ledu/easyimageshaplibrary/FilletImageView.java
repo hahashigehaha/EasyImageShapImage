@@ -16,6 +16,11 @@ import com.moshangjian.ledu.easyimageshaplibrary.inter.ShapInter;
 public class FilletImageView implements ShapInter {
     private final static String TAG = "FilletImageView";
 
+    private int radio ;
+    public FilletImageView(int radio){
+        this.radio = radio;
+    }
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public Bitmap getMixBitmap(int sWidth, int sHeight, int dWidth, int dHeight) {
@@ -29,7 +34,7 @@ public class FilletImageView implements ShapInter {
         oval.top = (sHeight - dHeight) / 2 ;
         oval.right = oval.left + dWidth ;
         oval.bottom = oval.bottom + dHeight ;
-        mCanvas.drawRoundRect(oval,25,25,paint);
+        mCanvas.drawRoundRect(oval,radio,radio,paint);
         return bitmap;
     }
 }

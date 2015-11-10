@@ -24,6 +24,7 @@
         android:layout_height="100dp"
         android:src="@drawable/easyimage_test2"
         shap:imageshap="fillet"
+        shap:filletradio="40dp"
         />
     <com.moshangjian.ledu.easyimageshaplibrary.EasyShapImageView
         android:layout_width="120dp"
